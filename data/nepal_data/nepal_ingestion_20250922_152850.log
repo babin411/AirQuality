@@ -1,0 +1,897 @@
+2025-09-22 15:28:50 | INFO     | 🇳🇵 ================================================================================
+2025-09-22 15:28:50 | INFO     | 🇳🇵 NEPAL OPENAQ DATA INGESTION STARTED
+2025-09-22 15:28:50 | INFO     | 🇳🇵 ================================================================================
+2025-09-22 15:28:50 | INFO     | 📁 Output Directory: data/nepal_data
+2025-09-22 15:28:50 | INFO     | 📋 Log File: data/nepal_data/nepal_ingestion_20250922_152850.log
+2025-09-22 15:28:50 | INFO     | 📊 🚀 STEP 1: Fetching Nepal locations...
+2025-09-22 15:28:50 | INFO     | 📊 🏢 Starting to fetch all locations in Nepal...
+2025-09-22 15:28:50 | INFO     | 📊 📍 Fetching locations page 1...
+2025-09-22 15:28:50 | INFO     | 📊 API Request: locations (attempt 1/3)
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Embassy Kathmandu | Locality: N/A | Sensors: 2
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Phora Durbar Kathman | Locality: N/A | Sensors: 2
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Dhathutole, Handigaun | Locality: None | Sensors: 6
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Dabali, Handigaun | Locality: None | Sensors: 6
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Gaushala Chowk (SC-01) | Locality: None | Sensors: 5
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Pulchowk (SC-44) | Locality: None | Sensors: 5
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Nakhipot (SC-08) | Locality: None | Sensors: 5
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Sunakothi (SC - 06) | Locality: None | Sensors: 5
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Chovar (SC - 07) | Locality: None | Sensors: 5
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Taudaha (SC - 09) | Locality: None | Sensors: 5
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Khumaltar (CEN-SR-25) | Locality: None | Sensors: 5
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Bharatpur Ward no 27 office Meghauli | Locality: None | Sensors: 5
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Khumaltar (CEN-SR-02) | Locality: None | Sensors: 5
+2025-09-22 15:28:52 | INFO     | 📊 📍 Location: Hetauda Udhyog Sang Office (CEN-SR-18) | Locality: None | Sensors: 5
+2025-09-22 15:28:52 | INFO     | 📊 ✅ Page 1: 14 locations added (Total: 14)
+2025-09-22 15:28:52 | INFO     | ✅ 🎯 TOTAL NEPAL LOCATIONS: 14
+2025-09-22 15:28:53 | INFO     | ✅ 💾 Saved 14 locations records to data/nepal_data/locations/nepal_locations_20250922_152850.parquet
+2025-09-22 15:28:53 | INFO     | 📊   📊 Columns: ['id', 'name', 'locality', 'timezone', 'country', 'owner', 'provider', 'isMobile', 'isMonitor', 'instruments', 'sensors', 'coordinates', 'licenses', 'bounds', 'distance', 'datetimeFirst', 'datetimeLast']
+2025-09-22 15:28:53 | INFO     | 📊   📏 Shape: (14, 17)
+2025-09-22 15:28:53 | INFO     | 📊 🚀 STEP 2: Extracting sensors from locations...
+2025-09-22 15:28:53 | INFO     | 📊 🔍 Extracting sensors from locations...
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Embassy Kathmandu (N/A) - 2 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 7713 | o3 ppm | Parameter: o3
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 7710 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Phora Durbar Kathman (N/A) - 2 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 7712 | o3 ppm | Parameter: o3
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 7711 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Dhathutole, Handigaun (None) - 6 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 8462455 | pm1 µg/m³ | Parameter: pm1
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 8462426 | pm10 µg/m³ | Parameter: pm10
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 6530219 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 8462440 | relativehumidity % | Parameter: relativehumidity
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 6530213 | temperature c | Parameter: temperature
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 8462430 | um003 particles/cm³ | Parameter: um003
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Dabali, Handigaun (None) - 6 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 9235744 | pm1 µg/m³ | Parameter: pm1
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 9235741 | pm10 µg/m³ | Parameter: pm10
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 9235746 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 9235742 | relativehumidity % | Parameter: relativehumidity
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 9235745 | temperature c | Parameter: temperature
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 9235734 | um003 particles/cm³ | Parameter: um003
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Gaushala Chowk (SC-01) (None) - 5 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153357 | pm1 µg/m³ | Parameter: pm1
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153358 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153359 | relativehumidity % | Parameter: relativehumidity
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153360 | temperature c | Parameter: temperature
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153361 | um003 particles/cm³ | Parameter: um003
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Pulchowk (SC-44) (None) - 5 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153467 | pm1 µg/m³ | Parameter: pm1
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153468 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153469 | relativehumidity % | Parameter: relativehumidity
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153470 | temperature c | Parameter: temperature
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153471 | um003 particles/cm³ | Parameter: um003
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Nakhipot (SC-08) (None) - 5 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153372 | pm1 µg/m³ | Parameter: pm1
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153373 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153374 | relativehumidity % | Parameter: relativehumidity
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153375 | temperature c | Parameter: temperature
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153376 | um003 particles/cm³ | Parameter: um003
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Sunakothi (SC - 06) (None) - 5 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153362 | pm1 µg/m³ | Parameter: pm1
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153363 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153364 | relativehumidity % | Parameter: relativehumidity
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153365 | temperature c | Parameter: temperature
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153366 | um003 particles/cm³ | Parameter: um003
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Chovar (SC - 07) (None) - 5 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153367 | pm1 µg/m³ | Parameter: pm1
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153368 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153369 | relativehumidity % | Parameter: relativehumidity
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153370 | temperature c | Parameter: temperature
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153371 | um003 particles/cm³ | Parameter: um003
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Taudaha (SC - 09) (None) - 5 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153377 | pm1 µg/m³ | Parameter: pm1
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153378 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153379 | relativehumidity % | Parameter: relativehumidity
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153380 | temperature c | Parameter: temperature
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153381 | um003 particles/cm³ | Parameter: um003
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Khumaltar (CEN-SR-25) (None) - 5 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153462 | pm1 µg/m³ | Parameter: pm1
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153463 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153464 | relativehumidity % | Parameter: relativehumidity
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153465 | temperature c | Parameter: temperature
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153466 | um003 particles/cm³ | Parameter: um003
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Bharatpur Ward no 27 office Meghauli (None) - 5 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153457 | pm1 µg/m³ | Parameter: pm1
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153458 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153459 | relativehumidity % | Parameter: relativehumidity
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153460 | temperature c | Parameter: temperature
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153461 | um003 particles/cm³ | Parameter: um003
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Khumaltar (CEN-SR-02) (None) - 5 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153452 | pm1 µg/m³ | Parameter: pm1
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153453 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153454 | relativehumidity % | Parameter: relativehumidity
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153455 | temperature c | Parameter: temperature
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14153456 | um003 particles/cm³ | Parameter: um003
+2025-09-22 15:28:53 | INFO     | 📊 🏢 Processing location: Hetauda Udhyog Sang Office (CEN-SR-18) (None) - 5 sensors
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14171643 | pm1 µg/m³ | Parameter: pm1
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14171644 | pm25 µg/m³ | Parameter: pm25
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14171645 | relativehumidity % | Parameter: relativehumidity
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14171646 | temperature c | Parameter: temperature
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: 14171647 | um003 particles/cm³ | Parameter: um003
+2025-09-22 15:28:53 | INFO     | ✅ 🎯 TOTAL NEPAL SENSORS: 66
+2025-09-22 15:28:53 | INFO     | ✅ 💾 Saved 66 sensors records to data/nepal_data/sensors/nepal_sensors_20250922_152850.parquet
+2025-09-22 15:28:53 | INFO     | 📊   📊 Columns: ['sensor_id', 'sensor_name', 'parameter', 'parameter_name', 'location_id', 'location_name', 'location_locality', 'country', 'coordinates', 'timezone', 'owner', 'provider']
+2025-09-22 15:28:53 | INFO     | 📊   📏 Shape: (66, 12)
+2025-09-22 15:28:53 | INFO     | 📊 🚀 STEP 3: Collecting measurements from all sensors...
+2025-09-22 15:28:53 | INFO     | 📊 🎯 Total sensors to process: 66
+2025-09-22 15:28:53 | INFO     | 📊 🔄 Processing sensor 1/66
+2025-09-22 15:28:53 | INFO     | 📊 📊 Fetching measurements for sensor 7713
+2025-09-22 15:28:53 | INFO     | 📊   🔬 Sensor: o3 ppm | Location: Embassy Kathmandu | Parameter: o3
+2025-09-22 15:28:53 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:28:56 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 15:28:56 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:29:00 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 15:29:00 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:29:04 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 15:29:04 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:29:09 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 15:29:09 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:29:15 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 15:29:15 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:29:21 | INFO     | 📊   📈 Page 6: 1000 measurements | Total: 6000
+2025-09-22 15:29:21 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:29:27 | INFO     | 📊   📈 Page 7: 1000 measurements | Total: 7000
+2025-09-22 15:29:27 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:29:33 | INFO     | 📊   📈 Page 8: 1000 measurements | Total: 8000
+2025-09-22 15:29:33 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:29:40 | INFO     | 📊   📈 Page 9: 1000 measurements | Total: 9000
+2025-09-22 15:29:40 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:29:47 | INFO     | 📊   📈 Page 10: 1000 measurements | Total: 10000
+2025-09-22 15:29:47 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:29:55 | INFO     | 📊   📈 Page 11: 1000 measurements | Total: 11000
+2025-09-22 15:29:55 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:30:03 | INFO     | 📊   📈 Page 12: 1000 measurements | Total: 12000
+2025-09-22 15:30:03 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:30:10 | INFO     | 📊   📈 Page 13: 1000 measurements | Total: 13000
+2025-09-22 15:30:10 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:30:17 | INFO     | 📊   📈 Page 14: 1000 measurements | Total: 14000
+2025-09-22 15:30:17 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:30:26 | INFO     | 📊   📈 Page 15: 1000 measurements | Total: 15000
+2025-09-22 15:30:26 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:30:36 | INFO     | 📊   📈 Page 16: 1000 measurements | Total: 16000
+2025-09-22 15:30:36 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 1/3)
+2025-09-22 15:30:44 | ERROR    | ❌ HTTP Error 408 for sensors/7713/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7713/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T09%3A43%3A53.093534%2B00%3A00&page=17&limit=1000
+2025-09-22 15:30:46 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 2/3)
+2025-09-22 15:30:52 | ERROR    | ❌ HTTP Error 408 for sensors/7713/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7713/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T09%3A43%3A53.093534%2B00%3A00&page=17&limit=1000
+2025-09-22 15:30:56 | INFO     | 📊 API Request: sensors/7713/measurements (attempt 3/3)
+2025-09-22 15:31:04 | ERROR    | ❌ HTTP Error 408 for sensors/7713/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7713/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T09%3A43%3A53.093534%2B00%3A00&page=17&limit=1000
+2025-09-22 15:31:04 | ERROR    | ❌ Failed to fetch data from sensors/7713/measurements after 3 attempts
+2025-09-22 15:31:04 | ERROR    | ❌ ❌ Failed to fetch measurements for sensor 7713
+2025-09-22 15:31:04 | INFO     | ✅ ✅ Sensor 7713 complete: 16000 measurements
+2025-09-22 15:31:04 | INFO     | 📊 🔄 Processing sensor 2/66
+2025-09-22 15:31:04 | INFO     | 📊 📊 Fetching measurements for sensor 7710
+2025-09-22 15:31:04 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Embassy Kathmandu | Parameter: pm25
+2025-09-22 15:31:04 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:31:08 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 15:31:08 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:31:13 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 15:31:13 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:31:17 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 15:31:17 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:31:22 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 15:31:22 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:31:28 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 15:31:28 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:31:32 | INFO     | 📊   📈 Page 6: 1000 measurements | Total: 6000
+2025-09-22 15:31:32 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:31:38 | INFO     | 📊   📈 Page 7: 1000 measurements | Total: 7000
+2025-09-22 15:31:38 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:31:43 | INFO     | 📊   📈 Page 8: 1000 measurements | Total: 8000
+2025-09-22 15:31:43 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:31:50 | INFO     | 📊   📈 Page 9: 1000 measurements | Total: 9000
+2025-09-22 15:31:50 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:31:58 | INFO     | 📊   📈 Page 10: 1000 measurements | Total: 10000
+2025-09-22 15:31:58 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:32:06 | INFO     | 📊   📈 Page 11: 1000 measurements | Total: 11000
+2025-09-22 15:32:06 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:32:12 | INFO     | 📊   📈 Page 12: 1000 measurements | Total: 12000
+2025-09-22 15:32:12 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:32:21 | INFO     | 📊   📈 Page 13: 1000 measurements | Total: 13000
+2025-09-22 15:32:21 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:32:30 | INFO     | 📊   📈 Page 14: 1000 measurements | Total: 14000
+2025-09-22 15:32:30 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:32:37 | INFO     | 📊   📈 Page 15: 1000 measurements | Total: 15000
+2025-09-22 15:32:37 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:32:46 | INFO     | 📊   📈 Page 16: 1000 measurements | Total: 16000
+2025-09-22 15:32:46 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 1/3)
+2025-09-22 15:32:54 | ERROR    | ❌ HTTP Error 408 for sensors/7710/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7710/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T09%3A46%3A04.313279%2B00%3A00&page=17&limit=1000
+2025-09-22 15:32:56 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 2/3)
+2025-09-22 15:33:03 | ERROR    | ❌ HTTP Error 408 for sensors/7710/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7710/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T09%3A46%3A04.313279%2B00%3A00&page=17&limit=1000
+2025-09-22 15:33:07 | INFO     | 📊 API Request: sensors/7710/measurements (attempt 3/3)
+2025-09-22 15:33:14 | ERROR    | ❌ HTTP Error 408 for sensors/7710/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7710/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T09%3A46%3A04.313279%2B00%3A00&page=17&limit=1000
+2025-09-22 15:33:14 | ERROR    | ❌ Failed to fetch data from sensors/7710/measurements after 3 attempts
+2025-09-22 15:33:14 | ERROR    | ❌ ❌ Failed to fetch measurements for sensor 7710
+2025-09-22 15:33:14 | INFO     | ✅ ✅ Sensor 7710 complete: 16000 measurements
+2025-09-22 15:33:14 | INFO     | 📊 🔄 Processing sensor 3/66
+2025-09-22 15:33:14 | INFO     | 📊 📊 Fetching measurements for sensor 7712
+2025-09-22 15:33:14 | INFO     | 📊   🔬 Sensor: o3 ppm | Location: Phora Durbar Kathman | Parameter: o3
+2025-09-22 15:33:14 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:33:18 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 15:33:18 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:33:21 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 15:33:21 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:33:26 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 15:33:26 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:33:30 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 15:33:30 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:33:36 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 15:33:36 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:33:40 | INFO     | 📊   📈 Page 6: 1000 measurements | Total: 6000
+2025-09-22 15:33:40 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:33:46 | INFO     | 📊   📈 Page 7: 1000 measurements | Total: 7000
+2025-09-22 15:33:46 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:33:53 | INFO     | 📊   📈 Page 8: 1000 measurements | Total: 8000
+2025-09-22 15:33:53 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:34:00 | INFO     | 📊   📈 Page 9: 1000 measurements | Total: 9000
+2025-09-22 15:34:00 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:34:06 | INFO     | 📊   📈 Page 10: 1000 measurements | Total: 10000
+2025-09-22 15:34:06 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:34:12 | INFO     | 📊   📈 Page 11: 1000 measurements | Total: 11000
+2025-09-22 15:34:12 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:34:21 | INFO     | 📊   📈 Page 12: 1000 measurements | Total: 12000
+2025-09-22 15:34:21 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:34:29 | INFO     | 📊   📈 Page 13: 1000 measurements | Total: 13000
+2025-09-22 15:34:29 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:34:38 | INFO     | 📊   📈 Page 14: 1000 measurements | Total: 14000
+2025-09-22 15:34:38 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:34:47 | INFO     | 📊   📈 Page 15: 1000 measurements | Total: 15000
+2025-09-22 15:34:47 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:57:37 | WARNING  | ⚠️  Connection error for sensors/7712/measurements (attempt 1)
+2025-09-22 15:57:44 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 2/3)
+2025-09-22 15:57:54 | INFO     | 📊   📈 Page 16: 1000 measurements | Total: 16000
+2025-09-22 15:57:54 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:58:01 | ERROR    | ❌ HTTP Error 408 for sensors/7712/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7712/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T09%3A48%3A14.849756%2B00%3A00&page=17&limit=1000
+2025-09-22 15:58:03 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 2/3)
+2025-09-22 15:58:13 | INFO     | 📊   📈 Page 17: 1000 measurements | Total: 17000
+2025-09-22 15:58:13 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 1/3)
+2025-09-22 15:58:21 | ERROR    | ❌ HTTP Error 408 for sensors/7712/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7712/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T09%3A48%3A14.849756%2B00%3A00&page=18&limit=1000
+2025-09-22 15:58:23 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 2/3)
+2025-09-22 15:58:30 | ERROR    | ❌ HTTP Error 408 for sensors/7712/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7712/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T09%3A48%3A14.849756%2B00%3A00&page=18&limit=1000
+2025-09-22 15:58:34 | INFO     | 📊 API Request: sensors/7712/measurements (attempt 3/3)
+2025-09-22 15:58:41 | ERROR    | ❌ HTTP Error 408 for sensors/7712/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7712/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T09%3A48%3A14.849756%2B00%3A00&page=18&limit=1000
+2025-09-22 15:58:41 | ERROR    | ❌ Failed to fetch data from sensors/7712/measurements after 3 attempts
+2025-09-22 15:58:41 | ERROR    | ❌ ❌ Failed to fetch measurements for sensor 7712
+2025-09-22 15:58:41 | INFO     | ✅ ✅ Sensor 7712 complete: 17000 measurements
+2025-09-22 15:58:41 | INFO     | 📊 🔄 Processing sensor 4/66
+2025-09-22 15:58:41 | INFO     | 📊 📊 Fetching measurements for sensor 7711
+2025-09-22 15:58:41 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Phora Durbar Kathman | Parameter: pm25
+2025-09-22 15:58:41 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:58:45 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 15:58:45 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:58:49 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 15:58:49 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:58:53 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 15:58:53 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:58:59 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 15:58:59 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:59:05 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 15:59:05 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:59:10 | INFO     | 📊   📈 Page 6: 1000 measurements | Total: 6000
+2025-09-22 15:59:10 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:59:16 | INFO     | 📊   📈 Page 7: 1000 measurements | Total: 7000
+2025-09-22 15:59:16 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:59:23 | INFO     | 📊   📈 Page 8: 1000 measurements | Total: 8000
+2025-09-22 15:59:23 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:59:29 | INFO     | 📊   📈 Page 9: 1000 measurements | Total: 9000
+2025-09-22 15:59:29 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:59:36 | INFO     | 📊   📈 Page 10: 1000 measurements | Total: 10000
+2025-09-22 15:59:36 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:59:44 | INFO     | 📊   📈 Page 11: 1000 measurements | Total: 11000
+2025-09-22 15:59:44 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:59:51 | INFO     | 📊   📈 Page 12: 1000 measurements | Total: 12000
+2025-09-22 15:59:51 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 15:59:59 | INFO     | 📊   📈 Page 13: 1000 measurements | Total: 13000
+2025-09-22 15:59:59 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 16:00:08 | INFO     | 📊   📈 Page 14: 1000 measurements | Total: 14000
+2025-09-22 16:00:08 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 16:00:18 | INFO     | 📊   📈 Page 15: 1000 measurements | Total: 15000
+2025-09-22 16:00:18 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 16:00:27 | INFO     | 📊   📈 Page 16: 1000 measurements | Total: 16000
+2025-09-22 16:00:27 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 1/3)
+2025-09-22 16:00:34 | ERROR    | ❌ HTTP Error 408 for sensors/7711/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7711/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T10%3A13%3A41.951448%2B00%3A00&page=17&limit=1000
+2025-09-22 16:00:36 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 2/3)
+2025-09-22 16:00:44 | ERROR    | ❌ HTTP Error 408 for sensors/7711/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7711/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T10%3A13%3A41.951448%2B00%3A00&page=17&limit=1000
+2025-09-22 16:00:48 | INFO     | 📊 API Request: sensors/7711/measurements (attempt 3/3)
+2025-09-22 16:00:55 | ERROR    | ❌ HTTP Error 408 for sensors/7711/measurements: 408 Client Error: Request Timeout for url: https://api.openaq.org/v3/sensors/7711/measurements?date_from=2024-01-01T00%3A00%3A00Z&date_to=2025-09-22T10%3A13%3A41.951448%2B00%3A00&page=17&limit=1000
+2025-09-22 16:00:55 | ERROR    | ❌ Failed to fetch data from sensors/7711/measurements after 3 attempts
+2025-09-22 16:00:55 | ERROR    | ❌ ❌ Failed to fetch measurements for sensor 7711
+2025-09-22 16:00:55 | INFO     | ✅ ✅ Sensor 7711 complete: 16000 measurements
+2025-09-22 16:00:56 | INFO     | ✅ 💾 Saved 65000 measurements records to data/nepal_data/measurements/nepal_measurements_20250922_152850_batch_001.parquet
+2025-09-22 16:00:56 | INFO     | 📊   📊 Columns: ['value', 'flagInfo', 'parameter', 'period', 'coordinates', 'summary', 'coverage', 'sensor_id', 'sensor_name', 'parameter_name', 'location_id', 'location_name', 'location_locality', 'country_name', 'country_code']
+2025-09-22 16:00:56 | INFO     | 📊   📏 Shape: (65000, 15)
+2025-09-22 16:00:57 | INFO     | 📊 🔄 Processing sensor 5/66
+2025-09-22 16:00:57 | INFO     | 📊 📊 Fetching measurements for sensor 8462455
+2025-09-22 16:00:57 | INFO     | 📊   🔬 Sensor: pm1 µg/m³ | Location: Dhathutole, Handigaun | Parameter: pm1
+2025-09-22 16:00:57 | INFO     | 📊 API Request: sensors/8462455/measurements (attempt 1/3)
+2025-09-22 16:01:01 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 16:01:01 | INFO     | 📊 API Request: sensors/8462455/measurements (attempt 1/3)
+2025-09-22 16:01:04 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 16:01:04 | INFO     | 📊 API Request: sensors/8462455/measurements (attempt 1/3)
+2025-09-22 16:01:09 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 16:01:09 | INFO     | 📊 API Request: sensors/8462455/measurements (attempt 1/3)
+2025-09-22 16:01:14 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 16:01:14 | INFO     | 📊 API Request: sensors/8462455/measurements (attempt 1/3)
+2025-09-22 16:01:20 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 16:01:20 | INFO     | 📊 API Request: sensors/8462455/measurements (attempt 1/3)
+2025-09-22 16:01:24 | INFO     | 📊   📈 Page 6: 126 measurements | Total: 5126
+2025-09-22 16:01:24 | INFO     | ✅ ✅ Sensor 8462455 complete: 5126 measurements
+2025-09-22 16:01:24 | INFO     | 📊 🔄 Processing sensor 6/66
+2025-09-22 16:01:24 | INFO     | 📊 📊 Fetching measurements for sensor 8462426
+2025-09-22 16:01:24 | INFO     | 📊   🔬 Sensor: pm10 µg/m³ | Location: Dhathutole, Handigaun | Parameter: pm10
+2025-09-22 16:01:24 | INFO     | 📊 API Request: sensors/8462426/measurements (attempt 1/3)
+2025-09-22 16:01:28 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 16:01:28 | INFO     | 📊 API Request: sensors/8462426/measurements (attempt 1/3)
+2025-09-22 16:01:32 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 16:01:32 | INFO     | 📊 API Request: sensors/8462426/measurements (attempt 1/3)
+2025-09-22 16:01:36 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 16:01:36 | INFO     | 📊 API Request: sensors/8462426/measurements (attempt 1/3)
+2025-09-22 16:01:41 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 16:01:41 | INFO     | 📊 API Request: sensors/8462426/measurements (attempt 1/3)
+2025-09-22 16:01:47 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 16:01:47 | INFO     | 📊 API Request: sensors/8462426/measurements (attempt 1/3)
+2025-09-22 16:01:51 | INFO     | 📊   📈 Page 6: 126 measurements | Total: 5126
+2025-09-22 16:01:51 | INFO     | ✅ ✅ Sensor 8462426 complete: 5126 measurements
+2025-09-22 16:01:51 | INFO     | 📊 🔄 Processing sensor 7/66
+2025-09-22 16:01:51 | INFO     | 📊 📊 Fetching measurements for sensor 6530219
+2025-09-22 16:01:51 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Dhathutole, Handigaun | Parameter: pm25
+2025-09-22 16:01:51 | INFO     | 📊 API Request: sensors/6530219/measurements (attempt 1/3)
+2025-09-22 16:01:55 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 16:01:55 | INFO     | 📊 API Request: sensors/6530219/measurements (attempt 1/3)
+2025-09-22 16:01:59 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 16:01:59 | INFO     | 📊 API Request: sensors/6530219/measurements (attempt 1/3)
+2025-09-22 16:02:04 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 16:02:04 | INFO     | 📊 API Request: sensors/6530219/measurements (attempt 1/3)
+2025-09-22 16:02:10 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 16:02:10 | INFO     | 📊 API Request: sensors/6530219/measurements (attempt 1/3)
+2025-09-22 16:02:16 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 16:02:16 | INFO     | 📊 API Request: sensors/6530219/measurements (attempt 1/3)
+2025-09-22 16:02:21 | INFO     | 📊   📈 Page 6: 1000 measurements | Total: 6000
+2025-09-22 16:02:21 | INFO     | 📊 API Request: sensors/6530219/measurements (attempt 1/3)
+2025-09-22 16:02:26 | INFO     | 📊   📈 Page 7: 1000 measurements | Total: 7000
+2025-09-22 16:02:26 | INFO     | 📊 API Request: sensors/6530219/measurements (attempt 1/3)
+2025-09-22 16:02:34 | INFO     | 📊   📈 Page 8: 1000 measurements | Total: 8000
+2025-09-22 16:02:34 | INFO     | 📊 API Request: sensors/6530219/measurements (attempt 1/3)
+2025-09-22 16:02:40 | INFO     | 📊   📈 Page 9: 516 measurements | Total: 8516
+2025-09-22 16:02:40 | INFO     | ✅ ✅ Sensor 6530219 complete: 8516 measurements
+2025-09-22 16:02:40 | INFO     | 📊 🔄 Processing sensor 8/66
+2025-09-22 16:02:40 | INFO     | 📊 📊 Fetching measurements for sensor 8462440
+2025-09-22 16:02:40 | INFO     | 📊   🔬 Sensor: relativehumidity % | Location: Dhathutole, Handigaun | Parameter: relativehumidity
+2025-09-22 16:02:40 | INFO     | 📊 API Request: sensors/8462440/measurements (attempt 1/3)
+2025-09-22 16:02:44 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 16:02:44 | INFO     | 📊 API Request: sensors/8462440/measurements (attempt 1/3)
+2025-09-22 16:02:49 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 16:02:49 | INFO     | 📊 API Request: sensors/8462440/measurements (attempt 1/3)
+2025-09-22 16:02:52 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 16:02:52 | INFO     | 📊 API Request: sensors/8462440/measurements (attempt 1/3)
+2025-09-22 16:02:57 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 16:02:57 | INFO     | 📊 API Request: sensors/8462440/measurements (attempt 1/3)
+2025-09-22 16:03:01 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 16:03:01 | INFO     | 📊 API Request: sensors/8462440/measurements (attempt 1/3)
+2025-09-22 16:03:06 | INFO     | 📊   📈 Page 6: 126 measurements | Total: 5126
+2025-09-22 16:03:06 | INFO     | ✅ ✅ Sensor 8462440 complete: 5126 measurements
+2025-09-22 16:03:06 | INFO     | 📊 🔄 Processing sensor 9/66
+2025-09-22 16:03:06 | INFO     | 📊 📊 Fetching measurements for sensor 6530213
+2025-09-22 16:03:06 | INFO     | 📊   🔬 Sensor: temperature c | Location: Dhathutole, Handigaun | Parameter: temperature
+2025-09-22 16:03:06 | INFO     | 📊 API Request: sensors/6530213/measurements (attempt 1/3)
+2025-09-22 16:03:09 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 16:03:09 | INFO     | 📊 API Request: sensors/6530213/measurements (attempt 1/3)
+2025-09-22 16:03:14 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 16:03:14 | INFO     | 📊 API Request: sensors/6530213/measurements (attempt 1/3)
+2025-09-22 16:03:19 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 16:03:19 | INFO     | 📊 API Request: sensors/6530213/measurements (attempt 1/3)
+2025-09-22 16:03:24 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 16:03:24 | INFO     | 📊 API Request: sensors/6530213/measurements (attempt 1/3)
+2025-09-22 16:03:30 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 16:03:30 | INFO     | 📊 API Request: sensors/6530213/measurements (attempt 1/3)
+2025-09-22 16:03:34 | INFO     | 📊   📈 Page 6: 1000 measurements | Total: 6000
+2025-09-22 16:03:34 | INFO     | 📊 API Request: sensors/6530213/measurements (attempt 1/3)
+2025-09-22 16:03:40 | INFO     | 📊   📈 Page 7: 1000 measurements | Total: 7000
+2025-09-22 16:03:40 | INFO     | 📊 API Request: sensors/6530213/measurements (attempt 1/3)
+2025-09-22 16:03:47 | INFO     | 📊   📈 Page 8: 1000 measurements | Total: 8000
+2025-09-22 16:03:47 | INFO     | 📊 API Request: sensors/6530213/measurements (attempt 1/3)
+2025-09-22 16:03:54 | INFO     | 📊   📈 Page 9: 516 measurements | Total: 8516
+2025-09-22 16:03:54 | INFO     | ✅ ✅ Sensor 6530213 complete: 8516 measurements
+2025-09-22 16:03:54 | INFO     | 📊 🔄 Processing sensor 10/66
+2025-09-22 16:03:54 | INFO     | 📊 📊 Fetching measurements for sensor 8462430
+2025-09-22 16:03:54 | INFO     | 📊   🔬 Sensor: um003 particles/cm³ | Location: Dhathutole, Handigaun | Parameter: um003
+2025-09-22 16:03:54 | INFO     | 📊 API Request: sensors/8462430/measurements (attempt 1/3)
+2025-09-22 16:03:57 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 16:03:57 | INFO     | 📊 API Request: sensors/8462430/measurements (attempt 1/3)
+2025-09-22 16:04:01 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 16:04:01 | INFO     | 📊 API Request: sensors/8462430/measurements (attempt 1/3)
+2025-09-22 16:04:06 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 16:04:06 | INFO     | 📊 API Request: sensors/8462430/measurements (attempt 1/3)
+2025-09-22 16:04:11 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 16:04:11 | INFO     | 📊 API Request: sensors/8462430/measurements (attempt 1/3)
+2025-09-22 16:04:16 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 16:04:16 | INFO     | 📊 API Request: sensors/8462430/measurements (attempt 1/3)
+2025-09-22 16:04:19 | INFO     | 📊   📈 Page 6: 126 measurements | Total: 5126
+2025-09-22 16:04:19 | INFO     | ✅ ✅ Sensor 8462430 complete: 5126 measurements
+2025-09-22 16:04:19 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:04:19 | INFO     | 📊 📊 PROGRESS SUMMARY
+2025-09-22 16:04:19 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:04:19 | INFO     | 📊 ⏱️  Elapsed Time: 0:35:29
+2025-09-22 16:04:19 | INFO     | 📊 🏢 Locations Processed: 14
+2025-09-22 16:04:19 | INFO     | 📊 🔬 Sensors Processed: 66
+2025-09-22 16:04:19 | INFO     | 📊 📊 Measurements Collected: 102,536
+2025-09-22 16:04:19 | INFO     | 📊 ❌ Errors Encountered: 14
+2025-09-22 16:04:19 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:04:19 | INFO     | 📊 🔄 Processing sensor 11/66
+2025-09-22 16:04:19 | INFO     | 📊 📊 Fetching measurements for sensor 9235744
+2025-09-22 16:04:19 | INFO     | 📊   🔬 Sensor: pm1 µg/m³ | Location: Dabali, Handigaun | Parameter: pm1
+2025-09-22 16:04:19 | INFO     | 📊 API Request: sensors/9235744/measurements (attempt 1/3)
+2025-09-22 16:04:22 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 16:04:22 | INFO     | 📊 API Request: sensors/9235744/measurements (attempt 1/3)
+2025-09-22 16:04:27 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 16:04:27 | INFO     | 📊 API Request: sensors/9235744/measurements (attempt 1/3)
+2025-09-22 16:04:32 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 16:04:32 | INFO     | 📊 API Request: sensors/9235744/measurements (attempt 1/3)
+2025-09-22 16:04:37 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 16:04:37 | INFO     | 📊 API Request: sensors/9235744/measurements (attempt 1/3)
+2025-09-22 16:04:42 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 16:04:42 | INFO     | 📊 API Request: sensors/9235744/measurements (attempt 1/3)
+2025-09-22 16:04:48 | INFO     | 📊   📈 Page 6: 1000 measurements | Total: 6000
+2025-09-22 16:04:48 | INFO     | 📊 API Request: sensors/9235744/measurements (attempt 1/3)
+2025-09-22 16:04:53 | INFO     | 📊   📈 Page 7: 1000 measurements | Total: 7000
+2025-09-22 16:04:53 | INFO     | 📊 API Request: sensors/9235744/measurements (attempt 1/3)
+2025-09-22 16:04:59 | INFO     | 📊   📈 Page 8: 498 measurements | Total: 7498
+2025-09-22 16:04:59 | INFO     | ✅ ✅ Sensor 9235744 complete: 7498 measurements
+2025-09-22 16:04:59 | INFO     | 📊 🔄 Processing sensor 12/66
+2025-09-22 16:04:59 | INFO     | 📊 📊 Fetching measurements for sensor 9235741
+2025-09-22 16:04:59 | INFO     | 📊   🔬 Sensor: pm10 µg/m³ | Location: Dabali, Handigaun | Parameter: pm10
+2025-09-22 16:04:59 | INFO     | 📊 API Request: sensors/9235741/measurements (attempt 1/3)
+2025-09-22 16:05:03 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 16:05:03 | INFO     | 📊 API Request: sensors/9235741/measurements (attempt 1/3)
+2025-09-22 16:05:06 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 16:05:06 | INFO     | 📊 API Request: sensors/9235741/measurements (attempt 1/3)
+2025-09-22 16:05:11 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 16:05:11 | INFO     | 📊 API Request: sensors/9235741/measurements (attempt 1/3)
+2025-09-22 16:05:16 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 16:05:16 | INFO     | 📊 API Request: sensors/9235741/measurements (attempt 1/3)
+2025-09-22 16:05:21 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 16:05:21 | INFO     | 📊 API Request: sensors/9235741/measurements (attempt 1/3)
+2025-09-22 16:05:26 | INFO     | 📊   📈 Page 6: 210 measurements | Total: 5210
+2025-09-22 16:05:26 | INFO     | ✅ ✅ Sensor 9235741 complete: 5210 measurements
+2025-09-22 16:05:26 | INFO     | ✅ 💾 Saved 50244 measurements records to data/nepal_data/measurements/nepal_measurements_20250922_152850_batch_002.parquet
+2025-09-22 16:05:26 | INFO     | 📊   📊 Columns: ['value', 'flagInfo', 'parameter', 'period', 'coordinates', 'summary', 'coverage', 'sensor_id', 'sensor_name', 'parameter_name', 'location_id', 'location_name', 'location_locality', 'country_name', 'country_code']
+2025-09-22 16:05:26 | INFO     | 📊   📏 Shape: (50244, 15)
+2025-09-22 16:05:26 | INFO     | 📊 🔄 Processing sensor 13/66
+2025-09-22 16:05:26 | INFO     | 📊 📊 Fetching measurements for sensor 9235746
+2025-09-22 16:05:26 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Dabali, Handigaun | Parameter: pm25
+2025-09-22 16:05:26 | INFO     | 📊 API Request: sensors/9235746/measurements (attempt 1/3)
+2025-09-22 16:05:30 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 16:05:30 | INFO     | 📊 API Request: sensors/9235746/measurements (attempt 1/3)
+2025-09-22 16:05:33 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 16:05:33 | INFO     | 📊 API Request: sensors/9235746/measurements (attempt 1/3)
+2025-09-22 16:05:38 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 16:05:38 | INFO     | 📊 API Request: sensors/9235746/measurements (attempt 1/3)
+2025-09-22 16:05:43 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 16:05:43 | INFO     | 📊 API Request: sensors/9235746/measurements (attempt 1/3)
+2025-09-22 16:05:49 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 16:05:49 | INFO     | 📊 API Request: sensors/9235746/measurements (attempt 1/3)
+2025-09-22 16:05:54 | INFO     | 📊   📈 Page 6: 1000 measurements | Total: 6000
+2025-09-22 16:05:54 | INFO     | 📊 API Request: sensors/9235746/measurements (attempt 1/3)
+2025-09-22 16:05:59 | INFO     | 📊   📈 Page 7: 1000 measurements | Total: 7000
+2025-09-22 16:05:59 | INFO     | 📊 API Request: sensors/9235746/measurements (attempt 1/3)
+2025-09-22 16:06:05 | INFO     | 📊   📈 Page 8: 498 measurements | Total: 7498
+2025-09-22 16:06:05 | INFO     | ✅ ✅ Sensor 9235746 complete: 7498 measurements
+2025-09-22 16:06:05 | INFO     | 📊 🔄 Processing sensor 14/66
+2025-09-22 16:06:05 | INFO     | 📊 📊 Fetching measurements for sensor 9235742
+2025-09-22 16:06:05 | INFO     | 📊   🔬 Sensor: relativehumidity % | Location: Dabali, Handigaun | Parameter: relativehumidity
+2025-09-22 16:06:05 | INFO     | 📊 API Request: sensors/9235742/measurements (attempt 1/3)
+2025-09-22 16:06:10 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 16:06:10 | INFO     | 📊 API Request: sensors/9235742/measurements (attempt 1/3)
+2025-09-22 16:06:14 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 16:06:14 | INFO     | 📊 API Request: sensors/9235742/measurements (attempt 1/3)
+2025-09-22 16:06:19 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 16:06:19 | INFO     | 📊 API Request: sensors/9235742/measurements (attempt 1/3)
+2025-09-22 16:06:24 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 16:06:24 | INFO     | 📊 API Request: sensors/9235742/measurements (attempt 1/3)
+2025-09-22 16:06:30 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 16:06:30 | INFO     | 📊 API Request: sensors/9235742/measurements (attempt 1/3)
+2025-09-22 16:06:34 | INFO     | 📊   📈 Page 6: 1000 measurements | Total: 6000
+2025-09-22 16:06:34 | INFO     | 📊 API Request: sensors/9235742/measurements (attempt 1/3)
+2025-09-22 16:06:41 | INFO     | 📊   📈 Page 7: 1000 measurements | Total: 7000
+2025-09-22 16:06:41 | INFO     | 📊 API Request: sensors/9235742/measurements (attempt 1/3)
+2025-09-22 16:06:47 | INFO     | 📊   📈 Page 8: 498 measurements | Total: 7498
+2025-09-22 16:06:47 | INFO     | ✅ ✅ Sensor 9235742 complete: 7498 measurements
+2025-09-22 16:06:47 | INFO     | 📊 🔄 Processing sensor 15/66
+2025-09-22 16:06:47 | INFO     | 📊 📊 Fetching measurements for sensor 9235745
+2025-09-22 16:06:47 | INFO     | 📊   🔬 Sensor: temperature c | Location: Dabali, Handigaun | Parameter: temperature
+2025-09-22 16:06:47 | INFO     | 📊 API Request: sensors/9235745/measurements (attempt 1/3)
+2025-09-22 16:06:51 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 16:06:51 | INFO     | 📊 API Request: sensors/9235745/measurements (attempt 1/3)
+2025-09-22 16:06:54 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 16:06:54 | INFO     | 📊 API Request: sensors/9235745/measurements (attempt 1/3)
+2025-09-22 16:06:59 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 16:06:59 | INFO     | 📊 API Request: sensors/9235745/measurements (attempt 1/3)
+2025-09-22 16:07:04 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 16:07:04 | INFO     | 📊 API Request: sensors/9235745/measurements (attempt 1/3)
+2025-09-22 16:07:10 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 16:07:10 | INFO     | 📊 API Request: sensors/9235745/measurements (attempt 1/3)
+2025-09-22 16:07:15 | INFO     | 📊   📈 Page 6: 1000 measurements | Total: 6000
+2025-09-22 16:07:15 | INFO     | 📊 API Request: sensors/9235745/measurements (attempt 1/3)
+2025-09-22 16:07:22 | INFO     | 📊   📈 Page 7: 1000 measurements | Total: 7000
+2025-09-22 16:07:22 | INFO     | 📊 API Request: sensors/9235745/measurements (attempt 1/3)
+2025-09-22 16:07:27 | INFO     | 📊   📈 Page 8: 498 measurements | Total: 7498
+2025-09-22 16:07:27 | INFO     | ✅ ✅ Sensor 9235745 complete: 7498 measurements
+2025-09-22 16:07:27 | INFO     | 📊 🔄 Processing sensor 16/66
+2025-09-22 16:07:27 | INFO     | 📊 📊 Fetching measurements for sensor 9235734
+2025-09-22 16:07:27 | INFO     | 📊   🔬 Sensor: um003 particles/cm³ | Location: Dabali, Handigaun | Parameter: um003
+2025-09-22 16:07:27 | INFO     | 📊 API Request: sensors/9235734/measurements (attempt 1/3)
+2025-09-22 16:07:31 | INFO     | 📊   📈 Page 1: 1000 measurements | Total: 1000
+2025-09-22 16:07:31 | INFO     | 📊 API Request: sensors/9235734/measurements (attempt 1/3)
+2025-09-22 16:07:35 | INFO     | 📊   📈 Page 2: 1000 measurements | Total: 2000
+2025-09-22 16:07:35 | INFO     | 📊 API Request: sensors/9235734/measurements (attempt 1/3)
+2025-09-22 16:07:39 | INFO     | 📊   📈 Page 3: 1000 measurements | Total: 3000
+2025-09-22 16:07:39 | INFO     | 📊 API Request: sensors/9235734/measurements (attempt 1/3)
+2025-09-22 16:07:44 | INFO     | 📊   📈 Page 4: 1000 measurements | Total: 4000
+2025-09-22 16:07:44 | INFO     | 📊 API Request: sensors/9235734/measurements (attempt 1/3)
+2025-09-22 16:07:49 | INFO     | 📊   📈 Page 5: 1000 measurements | Total: 5000
+2025-09-22 16:07:49 | INFO     | 📊 API Request: sensors/9235734/measurements (attempt 1/3)
+2025-09-22 16:07:55 | INFO     | 📊   📈 Page 6: 1000 measurements | Total: 6000
+2025-09-22 16:07:55 | INFO     | 📊 API Request: sensors/9235734/measurements (attempt 1/3)
+2025-09-22 16:08:02 | INFO     | 📊   📈 Page 7: 1000 measurements | Total: 7000
+2025-09-22 16:08:02 | INFO     | 📊 API Request: sensors/9235734/measurements (attempt 1/3)
+2025-09-22 16:08:09 | INFO     | 📊   📈 Page 8: 498 measurements | Total: 7498
+2025-09-22 16:08:09 | INFO     | ✅ ✅ Sensor 9235734 complete: 7498 measurements
+2025-09-22 16:08:09 | INFO     | 📊 🔄 Processing sensor 17/66
+2025-09-22 16:08:09 | INFO     | 📊 📊 Fetching measurements for sensor 14153357
+2025-09-22 16:08:09 | INFO     | 📊   🔬 Sensor: pm1 µg/m³ | Location: Gaushala Chowk (SC-01) | Parameter: pm1
+2025-09-22 16:08:09 | INFO     | 📊 API Request: sensors/14153357/measurements (attempt 1/3)
+2025-09-22 16:08:11 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:11 | INFO     | ✅ ✅ Sensor 14153357 complete: 82 measurements
+2025-09-22 16:08:11 | INFO     | 📊 🔄 Processing sensor 18/66
+2025-09-22 16:08:11 | INFO     | 📊 📊 Fetching measurements for sensor 14153358
+2025-09-22 16:08:11 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Gaushala Chowk (SC-01) | Parameter: pm25
+2025-09-22 16:08:11 | INFO     | 📊 API Request: sensors/14153358/measurements (attempt 1/3)
+2025-09-22 16:08:13 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:13 | INFO     | ✅ ✅ Sensor 14153358 complete: 82 measurements
+2025-09-22 16:08:13 | INFO     | 📊 🔄 Processing sensor 19/66
+2025-09-22 16:08:13 | INFO     | 📊 📊 Fetching measurements for sensor 14153359
+2025-09-22 16:08:13 | INFO     | 📊   🔬 Sensor: relativehumidity % | Location: Gaushala Chowk (SC-01) | Parameter: relativehumidity
+2025-09-22 16:08:13 | INFO     | 📊 API Request: sensors/14153359/measurements (attempt 1/3)
+2025-09-22 16:08:16 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:16 | INFO     | ✅ ✅ Sensor 14153359 complete: 82 measurements
+2025-09-22 16:08:16 | INFO     | 📊 🔄 Processing sensor 20/66
+2025-09-22 16:08:16 | INFO     | 📊 📊 Fetching measurements for sensor 14153360
+2025-09-22 16:08:16 | INFO     | 📊   🔬 Sensor: temperature c | Location: Gaushala Chowk (SC-01) | Parameter: temperature
+2025-09-22 16:08:16 | INFO     | 📊 API Request: sensors/14153360/measurements (attempt 1/3)
+2025-09-22 16:08:17 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:17 | INFO     | ✅ ✅ Sensor 14153360 complete: 82 measurements
+2025-09-22 16:08:17 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:08:17 | INFO     | 📊 📊 PROGRESS SUMMARY
+2025-09-22 16:08:17 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:08:17 | INFO     | 📊 ⏱️  Elapsed Time: 0:39:27
+2025-09-22 16:08:17 | INFO     | 📊 🏢 Locations Processed: 14
+2025-09-22 16:08:17 | INFO     | 📊 🔬 Sensors Processed: 66
+2025-09-22 16:08:17 | INFO     | 📊 📊 Measurements Collected: 145,564
+2025-09-22 16:08:17 | INFO     | 📊 ❌ Errors Encountered: 14
+2025-09-22 16:08:17 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:08:17 | INFO     | 📊 🔄 Processing sensor 21/66
+2025-09-22 16:08:17 | INFO     | 📊 📊 Fetching measurements for sensor 14153361
+2025-09-22 16:08:17 | INFO     | 📊   🔬 Sensor: um003 particles/cm³ | Location: Gaushala Chowk (SC-01) | Parameter: um003
+2025-09-22 16:08:17 | INFO     | 📊 API Request: sensors/14153361/measurements (attempt 1/3)
+2025-09-22 16:08:19 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:19 | INFO     | ✅ ✅ Sensor 14153361 complete: 82 measurements
+2025-09-22 16:08:19 | INFO     | 📊 🔄 Processing sensor 22/66
+2025-09-22 16:08:19 | INFO     | 📊 📊 Fetching measurements for sensor 14153467
+2025-09-22 16:08:19 | INFO     | 📊   🔬 Sensor: pm1 µg/m³ | Location: Pulchowk (SC-44) | Parameter: pm1
+2025-09-22 16:08:19 | INFO     | 📊 API Request: sensors/14153467/measurements (attempt 1/3)
+2025-09-22 16:08:20 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:20 | INFO     | ✅ ✅ Sensor 14153467 complete: 82 measurements
+2025-09-22 16:08:20 | INFO     | 📊 🔄 Processing sensor 23/66
+2025-09-22 16:08:20 | INFO     | 📊 📊 Fetching measurements for sensor 14153468
+2025-09-22 16:08:20 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Pulchowk (SC-44) | Parameter: pm25
+2025-09-22 16:08:20 | INFO     | 📊 API Request: sensors/14153468/measurements (attempt 1/3)
+2025-09-22 16:08:23 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:23 | INFO     | ✅ ✅ Sensor 14153468 complete: 82 measurements
+2025-09-22 16:08:23 | INFO     | 📊 🔄 Processing sensor 24/66
+2025-09-22 16:08:23 | INFO     | 📊 📊 Fetching measurements for sensor 14153469
+2025-09-22 16:08:23 | INFO     | 📊   🔬 Sensor: relativehumidity % | Location: Pulchowk (SC-44) | Parameter: relativehumidity
+2025-09-22 16:08:23 | INFO     | 📊 API Request: sensors/14153469/measurements (attempt 1/3)
+2025-09-22 16:08:25 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:25 | INFO     | ✅ ✅ Sensor 14153469 complete: 82 measurements
+2025-09-22 16:08:25 | INFO     | 📊 🔄 Processing sensor 25/66
+2025-09-22 16:08:25 | INFO     | 📊 📊 Fetching measurements for sensor 14153470
+2025-09-22 16:08:25 | INFO     | 📊   🔬 Sensor: temperature c | Location: Pulchowk (SC-44) | Parameter: temperature
+2025-09-22 16:08:25 | INFO     | 📊 API Request: sensors/14153470/measurements (attempt 1/3)
+2025-09-22 16:08:28 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:28 | INFO     | ✅ ✅ Sensor 14153470 complete: 82 measurements
+2025-09-22 16:08:28 | INFO     | 📊 🔄 Processing sensor 26/66
+2025-09-22 16:08:28 | INFO     | 📊 📊 Fetching measurements for sensor 14153471
+2025-09-22 16:08:28 | INFO     | 📊   🔬 Sensor: um003 particles/cm³ | Location: Pulchowk (SC-44) | Parameter: um003
+2025-09-22 16:08:28 | INFO     | 📊 API Request: sensors/14153471/measurements (attempt 1/3)
+2025-09-22 16:08:30 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:30 | INFO     | ✅ ✅ Sensor 14153471 complete: 82 measurements
+2025-09-22 16:08:30 | INFO     | 📊 🔄 Processing sensor 27/66
+2025-09-22 16:08:30 | INFO     | 📊 📊 Fetching measurements for sensor 14153372
+2025-09-22 16:08:30 | INFO     | 📊   🔬 Sensor: pm1 µg/m³ | Location: Nakhipot (SC-08) | Parameter: pm1
+2025-09-22 16:08:30 | INFO     | 📊 API Request: sensors/14153372/measurements (attempt 1/3)
+2025-09-22 16:08:33 | INFO     | 📊   📈 Page 1: 63 measurements | Total: 63
+2025-09-22 16:08:33 | INFO     | ✅ ✅ Sensor 14153372 complete: 63 measurements
+2025-09-22 16:08:33 | INFO     | 📊 🔄 Processing sensor 28/66
+2025-09-22 16:08:33 | INFO     | 📊 📊 Fetching measurements for sensor 14153373
+2025-09-22 16:08:33 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Nakhipot (SC-08) | Parameter: pm25
+2025-09-22 16:08:33 | INFO     | 📊 API Request: sensors/14153373/measurements (attempt 1/3)
+2025-09-22 16:08:34 | INFO     | 📊   📈 Page 1: 63 measurements | Total: 63
+2025-09-22 16:08:34 | INFO     | ✅ ✅ Sensor 14153373 complete: 63 measurements
+2025-09-22 16:08:34 | INFO     | 📊 🔄 Processing sensor 29/66
+2025-09-22 16:08:34 | INFO     | 📊 📊 Fetching measurements for sensor 14153374
+2025-09-22 16:08:34 | INFO     | 📊   🔬 Sensor: relativehumidity % | Location: Nakhipot (SC-08) | Parameter: relativehumidity
+2025-09-22 16:08:34 | INFO     | 📊 API Request: sensors/14153374/measurements (attempt 1/3)
+2025-09-22 16:08:37 | INFO     | 📊   📈 Page 1: 63 measurements | Total: 63
+2025-09-22 16:08:37 | INFO     | ✅ ✅ Sensor 14153374 complete: 63 measurements
+2025-09-22 16:08:37 | INFO     | 📊 🔄 Processing sensor 30/66
+2025-09-22 16:08:37 | INFO     | 📊 📊 Fetching measurements for sensor 14153375
+2025-09-22 16:08:37 | INFO     | 📊   🔬 Sensor: temperature c | Location: Nakhipot (SC-08) | Parameter: temperature
+2025-09-22 16:08:37 | INFO     | 📊 API Request: sensors/14153375/measurements (attempt 1/3)
+2025-09-22 16:08:38 | INFO     | 📊   📈 Page 1: 63 measurements | Total: 63
+2025-09-22 16:08:38 | INFO     | ✅ ✅ Sensor 14153375 complete: 63 measurements
+2025-09-22 16:08:38 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:08:38 | INFO     | 📊 📊 PROGRESS SUMMARY
+2025-09-22 16:08:38 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:08:38 | INFO     | 📊 ⏱️  Elapsed Time: 0:39:47
+2025-09-22 16:08:38 | INFO     | 📊 🏢 Locations Processed: 14
+2025-09-22 16:08:38 | INFO     | 📊 🔬 Sensors Processed: 66
+2025-09-22 16:08:38 | INFO     | 📊 📊 Measurements Collected: 146,308
+2025-09-22 16:08:38 | INFO     | 📊 ❌ Errors Encountered: 14
+2025-09-22 16:08:38 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:08:38 | INFO     | 📊 🔄 Processing sensor 31/66
+2025-09-22 16:08:38 | INFO     | 📊 📊 Fetching measurements for sensor 14153376
+2025-09-22 16:08:38 | INFO     | 📊   🔬 Sensor: um003 particles/cm³ | Location: Nakhipot (SC-08) | Parameter: um003
+2025-09-22 16:08:38 | INFO     | 📊 API Request: sensors/14153376/measurements (attempt 1/3)
+2025-09-22 16:08:40 | INFO     | 📊   📈 Page 1: 63 measurements | Total: 63
+2025-09-22 16:08:40 | INFO     | ✅ ✅ Sensor 14153376 complete: 63 measurements
+2025-09-22 16:08:40 | INFO     | 📊 🔄 Processing sensor 32/66
+2025-09-22 16:08:40 | INFO     | 📊 📊 Fetching measurements for sensor 14153362
+2025-09-22 16:08:40 | INFO     | 📊   🔬 Sensor: pm1 µg/m³ | Location: Sunakothi (SC - 06) | Parameter: pm1
+2025-09-22 16:08:40 | INFO     | 📊 API Request: sensors/14153362/measurements (attempt 1/3)
+2025-09-22 16:08:42 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:42 | INFO     | ✅ ✅ Sensor 14153362 complete: 82 measurements
+2025-09-22 16:08:42 | INFO     | 📊 🔄 Processing sensor 33/66
+2025-09-22 16:08:42 | INFO     | 📊 📊 Fetching measurements for sensor 14153363
+2025-09-22 16:08:42 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Sunakothi (SC - 06) | Parameter: pm25
+2025-09-22 16:08:42 | INFO     | 📊 API Request: sensors/14153363/measurements (attempt 1/3)
+2025-09-22 16:08:45 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:45 | INFO     | ✅ ✅ Sensor 14153363 complete: 82 measurements
+2025-09-22 16:08:45 | INFO     | 📊 🔄 Processing sensor 34/66
+2025-09-22 16:08:45 | INFO     | 📊 📊 Fetching measurements for sensor 14153364
+2025-09-22 16:08:45 | INFO     | 📊   🔬 Sensor: relativehumidity % | Location: Sunakothi (SC - 06) | Parameter: relativehumidity
+2025-09-22 16:08:45 | INFO     | 📊 API Request: sensors/14153364/measurements (attempt 1/3)
+2025-09-22 16:08:46 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:46 | INFO     | ✅ ✅ Sensor 14153364 complete: 82 measurements
+2025-09-22 16:08:46 | INFO     | 📊 🔄 Processing sensor 35/66
+2025-09-22 16:08:46 | INFO     | 📊 📊 Fetching measurements for sensor 14153365
+2025-09-22 16:08:46 | INFO     | 📊   🔬 Sensor: temperature c | Location: Sunakothi (SC - 06) | Parameter: temperature
+2025-09-22 16:08:46 | INFO     | 📊 API Request: sensors/14153365/measurements (attempt 1/3)
+2025-09-22 16:08:49 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:49 | INFO     | ✅ ✅ Sensor 14153365 complete: 82 measurements
+2025-09-22 16:08:49 | INFO     | 📊 🔄 Processing sensor 36/66
+2025-09-22 16:08:49 | INFO     | 📊 📊 Fetching measurements for sensor 14153366
+2025-09-22 16:08:49 | INFO     | 📊   🔬 Sensor: um003 particles/cm³ | Location: Sunakothi (SC - 06) | Parameter: um003
+2025-09-22 16:08:49 | INFO     | 📊 API Request: sensors/14153366/measurements (attempt 1/3)
+2025-09-22 16:08:52 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:52 | INFO     | ✅ ✅ Sensor 14153366 complete: 82 measurements
+2025-09-22 16:08:52 | INFO     | 📊 🔄 Processing sensor 37/66
+2025-09-22 16:08:52 | INFO     | 📊 📊 Fetching measurements for sensor 14153367
+2025-09-22 16:08:52 | INFO     | 📊   🔬 Sensor: pm1 µg/m³ | Location: Chovar (SC - 07) | Parameter: pm1
+2025-09-22 16:08:52 | INFO     | 📊 API Request: sensors/14153367/measurements (attempt 1/3)
+2025-09-22 16:08:53 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:53 | INFO     | ✅ ✅ Sensor 14153367 complete: 82 measurements
+2025-09-22 16:08:53 | INFO     | 📊 🔄 Processing sensor 38/66
+2025-09-22 16:08:53 | INFO     | 📊 📊 Fetching measurements for sensor 14153368
+2025-09-22 16:08:53 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Chovar (SC - 07) | Parameter: pm25
+2025-09-22 16:08:53 | INFO     | 📊 API Request: sensors/14153368/measurements (attempt 1/3)
+2025-09-22 16:08:56 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:56 | INFO     | ✅ ✅ Sensor 14153368 complete: 82 measurements
+2025-09-22 16:08:56 | INFO     | 📊 🔄 Processing sensor 39/66
+2025-09-22 16:08:56 | INFO     | 📊 📊 Fetching measurements for sensor 14153369
+2025-09-22 16:08:56 | INFO     | 📊   🔬 Sensor: relativehumidity % | Location: Chovar (SC - 07) | Parameter: relativehumidity
+2025-09-22 16:08:56 | INFO     | 📊 API Request: sensors/14153369/measurements (attempt 1/3)
+2025-09-22 16:08:57 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:57 | INFO     | ✅ ✅ Sensor 14153369 complete: 82 measurements
+2025-09-22 16:08:57 | INFO     | 📊 🔄 Processing sensor 40/66
+2025-09-22 16:08:57 | INFO     | 📊 📊 Fetching measurements for sensor 14153370
+2025-09-22 16:08:57 | INFO     | 📊   🔬 Sensor: temperature c | Location: Chovar (SC - 07) | Parameter: temperature
+2025-09-22 16:08:57 | INFO     | 📊 API Request: sensors/14153370/measurements (attempt 1/3)
+2025-09-22 16:08:59 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:08:59 | INFO     | ✅ ✅ Sensor 14153370 complete: 82 measurements
+2025-09-22 16:08:59 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:08:59 | INFO     | 📊 📊 PROGRESS SUMMARY
+2025-09-22 16:08:59 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:08:59 | INFO     | 📊 ⏱️  Elapsed Time: 0:40:09
+2025-09-22 16:08:59 | INFO     | 📊 🏢 Locations Processed: 14
+2025-09-22 16:08:59 | INFO     | 📊 🔬 Sensors Processed: 66
+2025-09-22 16:08:59 | INFO     | 📊 📊 Measurements Collected: 147,109
+2025-09-22 16:08:59 | INFO     | 📊 ❌ Errors Encountered: 14
+2025-09-22 16:08:59 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:08:59 | INFO     | 📊 🔄 Processing sensor 41/66
+2025-09-22 16:08:59 | INFO     | 📊 📊 Fetching measurements for sensor 14153371
+2025-09-22 16:08:59 | INFO     | 📊   🔬 Sensor: um003 particles/cm³ | Location: Chovar (SC - 07) | Parameter: um003
+2025-09-22 16:08:59 | INFO     | 📊 API Request: sensors/14153371/measurements (attempt 1/3)
+2025-09-22 16:09:01 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:01 | INFO     | ✅ ✅ Sensor 14153371 complete: 82 measurements
+2025-09-22 16:09:01 | INFO     | 📊 🔄 Processing sensor 42/66
+2025-09-22 16:09:01 | INFO     | 📊 📊 Fetching measurements for sensor 14153377
+2025-09-22 16:09:01 | INFO     | 📊   🔬 Sensor: pm1 µg/m³ | Location: Taudaha (SC - 09) | Parameter: pm1
+2025-09-22 16:09:01 | INFO     | 📊 API Request: sensors/14153377/measurements (attempt 1/3)
+2025-09-22 16:09:03 | INFO     | 📊   📈 Page 1: 68 measurements | Total: 68
+2025-09-22 16:09:03 | INFO     | ✅ ✅ Sensor 14153377 complete: 68 measurements
+2025-09-22 16:09:03 | INFO     | 📊 🔄 Processing sensor 43/66
+2025-09-22 16:09:03 | INFO     | 📊 📊 Fetching measurements for sensor 14153378
+2025-09-22 16:09:03 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Taudaha (SC - 09) | Parameter: pm25
+2025-09-22 16:09:03 | INFO     | 📊 API Request: sensors/14153378/measurements (attempt 1/3)
+2025-09-22 16:09:06 | INFO     | 📊   📈 Page 1: 68 measurements | Total: 68
+2025-09-22 16:09:06 | INFO     | ✅ ✅ Sensor 14153378 complete: 68 measurements
+2025-09-22 16:09:06 | INFO     | 📊 🔄 Processing sensor 44/66
+2025-09-22 16:09:06 | INFO     | 📊 📊 Fetching measurements for sensor 14153379
+2025-09-22 16:09:06 | INFO     | 📊   🔬 Sensor: relativehumidity % | Location: Taudaha (SC - 09) | Parameter: relativehumidity
+2025-09-22 16:09:06 | INFO     | 📊 API Request: sensors/14153379/measurements (attempt 1/3)
+2025-09-22 16:09:08 | INFO     | 📊   📈 Page 1: 68 measurements | Total: 68
+2025-09-22 16:09:08 | INFO     | ✅ ✅ Sensor 14153379 complete: 68 measurements
+2025-09-22 16:09:08 | INFO     | 📊 🔄 Processing sensor 45/66
+2025-09-22 16:09:08 | INFO     | 📊 📊 Fetching measurements for sensor 14153380
+2025-09-22 16:09:08 | INFO     | 📊   🔬 Sensor: temperature c | Location: Taudaha (SC - 09) | Parameter: temperature
+2025-09-22 16:09:08 | INFO     | 📊 API Request: sensors/14153380/measurements (attempt 1/3)
+2025-09-22 16:09:09 | INFO     | 📊   📈 Page 1: 68 measurements | Total: 68
+2025-09-22 16:09:09 | INFO     | ✅ ✅ Sensor 14153380 complete: 68 measurements
+2025-09-22 16:09:09 | INFO     | 📊 🔄 Processing sensor 46/66
+2025-09-22 16:09:09 | INFO     | 📊 📊 Fetching measurements for sensor 14153381
+2025-09-22 16:09:09 | INFO     | 📊   🔬 Sensor: um003 particles/cm³ | Location: Taudaha (SC - 09) | Parameter: um003
+2025-09-22 16:09:09 | INFO     | 📊 API Request: sensors/14153381/measurements (attempt 1/3)
+2025-09-22 16:09:12 | INFO     | 📊   📈 Page 1: 68 measurements | Total: 68
+2025-09-22 16:09:12 | INFO     | ✅ ✅ Sensor 14153381 complete: 68 measurements
+2025-09-22 16:09:12 | INFO     | 📊 🔄 Processing sensor 47/66
+2025-09-22 16:09:12 | INFO     | 📊 📊 Fetching measurements for sensor 14153462
+2025-09-22 16:09:12 | INFO     | 📊   🔬 Sensor: pm1 µg/m³ | Location: Khumaltar (CEN-SR-25) | Parameter: pm1
+2025-09-22 16:09:12 | INFO     | 📊 API Request: sensors/14153462/measurements (attempt 1/3)
+2025-09-22 16:09:15 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:15 | INFO     | ✅ ✅ Sensor 14153462 complete: 82 measurements
+2025-09-22 16:09:15 | INFO     | 📊 🔄 Processing sensor 48/66
+2025-09-22 16:09:15 | INFO     | 📊 📊 Fetching measurements for sensor 14153463
+2025-09-22 16:09:15 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Khumaltar (CEN-SR-25) | Parameter: pm25
+2025-09-22 16:09:15 | INFO     | 📊 API Request: sensors/14153463/measurements (attempt 1/3)
+2025-09-22 16:09:17 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:17 | INFO     | ✅ ✅ Sensor 14153463 complete: 82 measurements
+2025-09-22 16:09:17 | INFO     | 📊 🔄 Processing sensor 49/66
+2025-09-22 16:09:17 | INFO     | 📊 📊 Fetching measurements for sensor 14153464
+2025-09-22 16:09:17 | INFO     | 📊   🔬 Sensor: relativehumidity % | Location: Khumaltar (CEN-SR-25) | Parameter: relativehumidity
+2025-09-22 16:09:17 | INFO     | 📊 API Request: sensors/14153464/measurements (attempt 1/3)
+2025-09-22 16:09:19 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:19 | INFO     | ✅ ✅ Sensor 14153464 complete: 82 measurements
+2025-09-22 16:09:19 | INFO     | 📊 🔄 Processing sensor 50/66
+2025-09-22 16:09:19 | INFO     | 📊 📊 Fetching measurements for sensor 14153465
+2025-09-22 16:09:19 | INFO     | 📊   🔬 Sensor: temperature c | Location: Khumaltar (CEN-SR-25) | Parameter: temperature
+2025-09-22 16:09:19 | INFO     | 📊 API Request: sensors/14153465/measurements (attempt 1/3)
+2025-09-22 16:09:21 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:21 | INFO     | ✅ ✅ Sensor 14153465 complete: 82 measurements
+2025-09-22 16:09:21 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:09:21 | INFO     | 📊 📊 PROGRESS SUMMARY
+2025-09-22 16:09:21 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:09:21 | INFO     | 📊 ⏱️  Elapsed Time: 0:40:30
+2025-09-22 16:09:21 | INFO     | 📊 🏢 Locations Processed: 14
+2025-09-22 16:09:21 | INFO     | 📊 🔬 Sensors Processed: 66
+2025-09-22 16:09:21 | INFO     | 📊 📊 Measurements Collected: 147,859
+2025-09-22 16:09:21 | INFO     | 📊 ❌ Errors Encountered: 14
+2025-09-22 16:09:21 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:09:21 | INFO     | 📊 🔄 Processing sensor 51/66
+2025-09-22 16:09:21 | INFO     | 📊 📊 Fetching measurements for sensor 14153466
+2025-09-22 16:09:21 | INFO     | 📊   🔬 Sensor: um003 particles/cm³ | Location: Khumaltar (CEN-SR-25) | Parameter: um003
+2025-09-22 16:09:21 | INFO     | 📊 API Request: sensors/14153466/measurements (attempt 1/3)
+2025-09-22 16:09:23 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:23 | INFO     | ✅ ✅ Sensor 14153466 complete: 82 measurements
+2025-09-22 16:09:23 | INFO     | 📊 🔄 Processing sensor 52/66
+2025-09-22 16:09:23 | INFO     | 📊 📊 Fetching measurements for sensor 14153457
+2025-09-22 16:09:23 | INFO     | 📊   🔬 Sensor: pm1 µg/m³ | Location: Bharatpur Ward no 27 office Meghauli | Parameter: pm1
+2025-09-22 16:09:23 | INFO     | 📊 API Request: sensors/14153457/measurements (attempt 1/3)
+2025-09-22 16:09:26 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:26 | INFO     | ✅ ✅ Sensor 14153457 complete: 82 measurements
+2025-09-22 16:09:26 | INFO     | 📊 🔄 Processing sensor 53/66
+2025-09-22 16:09:26 | INFO     | 📊 📊 Fetching measurements for sensor 14153458
+2025-09-22 16:09:26 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Bharatpur Ward no 27 office Meghauli | Parameter: pm25
+2025-09-22 16:09:26 | INFO     | 📊 API Request: sensors/14153458/measurements (attempt 1/3)
+2025-09-22 16:09:28 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:28 | INFO     | ✅ ✅ Sensor 14153458 complete: 82 measurements
+2025-09-22 16:09:28 | INFO     | 📊 🔄 Processing sensor 54/66
+2025-09-22 16:09:28 | INFO     | 📊 📊 Fetching measurements for sensor 14153459
+2025-09-22 16:09:28 | INFO     | 📊   🔬 Sensor: relativehumidity % | Location: Bharatpur Ward no 27 office Meghauli | Parameter: relativehumidity
+2025-09-22 16:09:28 | INFO     | 📊 API Request: sensors/14153459/measurements (attempt 1/3)
+2025-09-22 16:09:31 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:31 | INFO     | ✅ ✅ Sensor 14153459 complete: 82 measurements
+2025-09-22 16:09:31 | INFO     | 📊 🔄 Processing sensor 55/66
+2025-09-22 16:09:31 | INFO     | 📊 📊 Fetching measurements for sensor 14153460
+2025-09-22 16:09:31 | INFO     | 📊   🔬 Sensor: temperature c | Location: Bharatpur Ward no 27 office Meghauli | Parameter: temperature
+2025-09-22 16:09:31 | INFO     | 📊 API Request: sensors/14153460/measurements (attempt 1/3)
+2025-09-22 16:09:33 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:33 | INFO     | ✅ ✅ Sensor 14153460 complete: 82 measurements
+2025-09-22 16:09:33 | INFO     | 📊 🔄 Processing sensor 56/66
+2025-09-22 16:09:33 | INFO     | 📊 📊 Fetching measurements for sensor 14153461
+2025-09-22 16:09:33 | INFO     | 📊   🔬 Sensor: um003 particles/cm³ | Location: Bharatpur Ward no 27 office Meghauli | Parameter: um003
+2025-09-22 16:09:33 | INFO     | 📊 API Request: sensors/14153461/measurements (attempt 1/3)
+2025-09-22 16:09:35 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:35 | INFO     | ✅ ✅ Sensor 14153461 complete: 82 measurements
+2025-09-22 16:09:35 | INFO     | 📊 🔄 Processing sensor 57/66
+2025-09-22 16:09:35 | INFO     | 📊 📊 Fetching measurements for sensor 14153452
+2025-09-22 16:09:35 | INFO     | 📊   🔬 Sensor: pm1 µg/m³ | Location: Khumaltar (CEN-SR-02) | Parameter: pm1
+2025-09-22 16:09:35 | INFO     | 📊 API Request: sensors/14153452/measurements (attempt 1/3)
+2025-09-22 16:09:37 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:37 | INFO     | ✅ ✅ Sensor 14153452 complete: 82 measurements
+2025-09-22 16:09:37 | INFO     | 📊 🔄 Processing sensor 58/66
+2025-09-22 16:09:37 | INFO     | 📊 📊 Fetching measurements for sensor 14153453
+2025-09-22 16:09:37 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Khumaltar (CEN-SR-02) | Parameter: pm25
+2025-09-22 16:09:37 | INFO     | 📊 API Request: sensors/14153453/measurements (attempt 1/3)
+2025-09-22 16:09:39 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:39 | INFO     | ✅ ✅ Sensor 14153453 complete: 82 measurements
+2025-09-22 16:09:39 | INFO     | 📊 🔄 Processing sensor 59/66
+2025-09-22 16:09:39 | INFO     | 📊 📊 Fetching measurements for sensor 14153454
+2025-09-22 16:09:39 | INFO     | 📊   🔬 Sensor: relativehumidity % | Location: Khumaltar (CEN-SR-02) | Parameter: relativehumidity
+2025-09-22 16:09:39 | INFO     | 📊 API Request: sensors/14153454/measurements (attempt 1/3)
+2025-09-22 16:09:41 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:41 | INFO     | ✅ ✅ Sensor 14153454 complete: 82 measurements
+2025-09-22 16:09:41 | INFO     | 📊 🔄 Processing sensor 60/66
+2025-09-22 16:09:41 | INFO     | 📊 📊 Fetching measurements for sensor 14153455
+2025-09-22 16:09:41 | INFO     | 📊   🔬 Sensor: temperature c | Location: Khumaltar (CEN-SR-02) | Parameter: temperature
+2025-09-22 16:09:41 | INFO     | 📊 API Request: sensors/14153455/measurements (attempt 1/3)
+2025-09-22 16:09:44 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:44 | INFO     | ✅ ✅ Sensor 14153455 complete: 82 measurements
+2025-09-22 16:09:44 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:09:44 | INFO     | 📊 📊 PROGRESS SUMMARY
+2025-09-22 16:09:44 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:09:44 | INFO     | 📊 ⏱️  Elapsed Time: 0:40:54
+2025-09-22 16:09:44 | INFO     | 📊 🏢 Locations Processed: 14
+2025-09-22 16:09:44 | INFO     | 📊 🔬 Sensors Processed: 66
+2025-09-22 16:09:44 | INFO     | 📊 📊 Measurements Collected: 148,679
+2025-09-22 16:09:44 | INFO     | 📊 ❌ Errors Encountered: 14
+2025-09-22 16:09:44 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:09:44 | INFO     | 📊 🔄 Processing sensor 61/66
+2025-09-22 16:09:44 | INFO     | 📊 📊 Fetching measurements for sensor 14153456
+2025-09-22 16:09:44 | INFO     | 📊   🔬 Sensor: um003 particles/cm³ | Location: Khumaltar (CEN-SR-02) | Parameter: um003
+2025-09-22 16:09:44 | INFO     | 📊 API Request: sensors/14153456/measurements (attempt 1/3)
+2025-09-22 16:09:47 | INFO     | 📊   📈 Page 1: 82 measurements | Total: 82
+2025-09-22 16:09:47 | INFO     | ✅ ✅ Sensor 14153456 complete: 82 measurements
+2025-09-22 16:09:47 | INFO     | 📊 🔄 Processing sensor 62/66
+2025-09-22 16:09:47 | INFO     | 📊 📊 Fetching measurements for sensor 14171643
+2025-09-22 16:09:47 | INFO     | 📊   🔬 Sensor: pm1 µg/m³ | Location: Hetauda Udhyog Sang Office (CEN-SR-18) | Parameter: pm1
+2025-09-22 16:09:47 | INFO     | 📊 API Request: sensors/14171643/measurements (attempt 1/3)
+2025-09-22 16:09:49 | INFO     | 📊   📈 Page 1: 16 measurements | Total: 16
+2025-09-22 16:09:49 | INFO     | ✅ ✅ Sensor 14171643 complete: 16 measurements
+2025-09-22 16:09:49 | INFO     | 📊 🔄 Processing sensor 63/66
+2025-09-22 16:09:49 | INFO     | 📊 📊 Fetching measurements for sensor 14171644
+2025-09-22 16:09:49 | INFO     | 📊   🔬 Sensor: pm25 µg/m³ | Location: Hetauda Udhyog Sang Office (CEN-SR-18) | Parameter: pm25
+2025-09-22 16:09:49 | INFO     | 📊 API Request: sensors/14171644/measurements (attempt 1/3)
+2025-09-22 16:09:51 | INFO     | 📊   📈 Page 1: 16 measurements | Total: 16
+2025-09-22 16:09:51 | INFO     | ✅ ✅ Sensor 14171644 complete: 16 measurements
+2025-09-22 16:09:51 | INFO     | 📊 🔄 Processing sensor 64/66
+2025-09-22 16:09:51 | INFO     | 📊 📊 Fetching measurements for sensor 14171645
+2025-09-22 16:09:51 | INFO     | 📊   🔬 Sensor: relativehumidity % | Location: Hetauda Udhyog Sang Office (CEN-SR-18) | Parameter: relativehumidity
+2025-09-22 16:09:51 | INFO     | 📊 API Request: sensors/14171645/measurements (attempt 1/3)
+2025-09-22 16:09:52 | INFO     | 📊   📈 Page 1: 16 measurements | Total: 16
+2025-09-22 16:09:52 | INFO     | ✅ ✅ Sensor 14171645 complete: 16 measurements
+2025-09-22 16:09:52 | INFO     | 📊 🔄 Processing sensor 65/66
+2025-09-22 16:09:52 | INFO     | 📊 📊 Fetching measurements for sensor 14171646
+2025-09-22 16:09:52 | INFO     | 📊   🔬 Sensor: temperature c | Location: Hetauda Udhyog Sang Office (CEN-SR-18) | Parameter: temperature
+2025-09-22 16:09:52 | INFO     | 📊 API Request: sensors/14171646/measurements (attempt 1/3)
+2025-09-22 16:09:53 | INFO     | 📊   📈 Page 1: 16 measurements | Total: 16
+2025-09-22 16:09:53 | INFO     | ✅ ✅ Sensor 14171646 complete: 16 measurements
+2025-09-22 16:09:53 | INFO     | 📊 🔄 Processing sensor 66/66
+2025-09-22 16:09:53 | INFO     | 📊 📊 Fetching measurements for sensor 14171647
+2025-09-22 16:09:53 | INFO     | 📊   🔬 Sensor: um003 particles/cm³ | Location: Hetauda Udhyog Sang Office (CEN-SR-18) | Parameter: um003
+2025-09-22 16:09:53 | INFO     | 📊 API Request: sensors/14171647/measurements (attempt 1/3)
+2025-09-22 16:09:55 | INFO     | 📊   📈 Page 1: 16 measurements | Total: 16
+2025-09-22 16:09:55 | INFO     | ✅ ✅ Sensor 14171647 complete: 16 measurements
+2025-09-22 16:09:55 | INFO     | ✅ 💾 Saved 33597 measurements records to data/nepal_data/measurements/nepal_measurements_20250922_152850_batch_003.parquet
+2025-09-22 16:09:55 | INFO     | 📊   📊 Columns: ['value', 'flagInfo', 'parameter', 'period', 'coordinates', 'summary', 'coverage', 'sensor_id', 'sensor_name', 'parameter_name', 'location_id', 'location_name', 'location_locality', 'country_name', 'country_code']
+2025-09-22 16:09:55 | INFO     | 📊   📏 Shape: (33597, 15)
+2025-09-22 16:09:55 | INFO     | ✅ 🎉 ================================================================================
+2025-09-22 16:09:55 | INFO     | ✅ 🎉 NEPAL DATA INGESTION COMPLETED SUCCESSFULLY!
+2025-09-22 16:09:55 | INFO     | ✅ 🎉 ================================================================================
+2025-09-22 16:09:55 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:09:55 | INFO     | 📊 📊 PROGRESS SUMMARY
+2025-09-22 16:09:55 | INFO     | 📊 📊 ============================================================
+2025-09-22 16:09:55 | INFO     | 📊 ⏱️  Elapsed Time: 0:41:05
+2025-09-22 16:09:55 | INFO     | 📊 🏢 Locations Processed: 14
+2025-09-22 16:09:55 | INFO     | 📊 🔬 Sensors Processed: 66
+2025-09-22 16:09:55 | INFO     | 📊 📊 Measurements Collected: 148,841
+2025-09-22 16:09:55 | INFO     | 📊 ❌ Errors Encountered: 14
+2025-09-22 16:09:55 | INFO     | 📊 📊 ============================================================
